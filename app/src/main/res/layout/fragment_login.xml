@@ -9,7 +9,7 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_login_small_fix"
         android:scaleType="center"
@@ -86,7 +86,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="14dp"
             android:hint="password"
-            app:startIconDrawable="@drawable/ic_baseline_person_24"
+            app:startIconDrawable="@drawable/ic_baseline_lock_24"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ti_user_name_layout"

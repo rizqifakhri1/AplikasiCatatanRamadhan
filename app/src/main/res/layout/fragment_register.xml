@@ -1,14 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_default"
+    tools:context=".LoginFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_login_small_fix"
+        android:scaleType="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <!--Icon Handder Catatan Ramadhan-->
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_dua"
+        android:layout_marginTop="25dp"
+        app:layout_constraintBottom_toTopOf="@id/bg_login_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Constraint untuk nampung bg putih-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bg_login_white"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/bg_login_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_icon">
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Register"
+            android:textColor="@color/purple_500"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toTopOf="@id/ti_user_name_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--TextInput UserName -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ti_user_name_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:hint="Masukan Username"
+            app:layout_constraintBottom_toTopOf="@id/ti_user_email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_login"
+            app:startIconDrawable="@drawable/ic_baseline_person_24"
+            tools:layout_editor_absoluteY="212dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ti_user_name_edit_Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--TextInput Email -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ti_user_email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:hint="Masukan Email"
+            app:layout_constraintBottom_toTopOf="@id/ti_user_password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ti_user_name_layout"
+            app:startIconDrawable="@drawable/ic_baseline_person_24"
+            tools:layout_editor_absoluteY="212dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ti_user_email_edit_Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--TextInput Password -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ti_user_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:hint="Masukan Password"
+            app:layout_constraintBottom_toTopOf="@id/ti_user_password_confirm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ti_user_email"
+            app:startIconDrawable="@drawable/ic_baseline_person_24"
+            tools:layout_editor_absoluteY="212dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ti_user_password_edit_Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--TextInput Password -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ti_user_password_confirm"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:hint="Masukan Kembali Password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ti_user_password"
+            app:startIconDrawable="@drawable/ic_baseline_person_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ti_user_password_confirm_edit_Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_radius"
+            android:text="LOGIN"
+            app:layout_constraintBottom_toTopOf="@id/tv_register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:text="Belum Punya Akun? Klik Disini"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
