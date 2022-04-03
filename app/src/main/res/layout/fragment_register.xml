@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/bg_login_small_fix"
         android:scaleType="center"
+        android:layout_marginTop=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -65,7 +66,7 @@
             android:id="@+id/ti_user_name_layout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:layout_marginTop="14dp"
             android:layout_marginStart="14dp"
             android:layout_marginEnd="14dp"
@@ -80,7 +81,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ti_user_name_edit_Text"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="match_parent" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -89,7 +90,7 @@
             android:id="@+id/ti_user_email"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:layout_marginTop="14dp"
             android:layout_marginStart="14dp"
             android:layout_marginEnd="14dp"
@@ -104,7 +105,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ti_user_email_edit_Text"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="match_parent" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -113,7 +114,7 @@
             android:id="@+id/ti_user_password"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:layout_marginTop="14dp"
             android:layout_marginStart="14dp"
             android:layout_marginEnd="14dp"
@@ -128,7 +129,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ti_user_password_edit_Text"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="match_parent" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -137,7 +138,7 @@
             android:id="@+id/ti_user_password_confirm"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="61dp"
+            android:layout_height="55dp"
             android:layout_marginTop="14dp"
             android:layout_marginStart="14dp"
             android:layout_marginEnd="14dp"
@@ -150,25 +151,25 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ti_user_password_confirm_edit_Text"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="match_parent" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/btn_login"
+            android:id="@+id/btn_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
             android:layout_marginEnd="14dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/button_radius"
-            android:text="LOGIN"
-            app:layout_constraintBottom_toTopOf="@id/tv_register"
+            android:text="Register"
+            app:layout_constraintBottom_toTopOf="@id/tv_login_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/tv_register"
+            android:id="@+id/tv_login_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="14dp"

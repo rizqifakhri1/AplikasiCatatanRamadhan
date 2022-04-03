@@ -62,7 +62,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/ti_user_name_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:layout_margin="14dp"
             android:hint="username"
             app:startIconDrawable="@drawable/ic_baseline_person_24"
@@ -74,7 +74,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ti_user_name_edit_Text"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="match_parent"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -83,7 +83,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/ti_user_password"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:layout_margin="14dp"
             android:hint="password"
             app:startIconDrawable="@drawable/ic_baseline_lock_24"
@@ -95,7 +95,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ti_user_password_edit_Text"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="match_parent"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -103,7 +103,7 @@
             android:id="@+id/btn_login"
             android:text="LOGIN"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:layout_marginStart="14dp"
             android:layout_marginEnd="14dp"
             android:layout_marginBottom="10dp"
