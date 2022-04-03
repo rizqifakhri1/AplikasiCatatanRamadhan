@@ -20,11 +20,11 @@
     <!--Icon Handder Catatan Ramadhan-->
     <ImageView
         android:id="@+id/iv_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
+        android:layout_width="206dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="25dp"
         android:scaleType="fitCenter"
         android:src="@drawable/logo_dua"
-        android:layout_marginTop="25dp"
         app:layout_constraintBottom_toTopOf="@id/bg_login_white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,7 +50,7 @@
             android:id="@+id/tv_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="14dp"
             android:fontFamily="@font/poppins_bold"
             android:text="Register"
             android:textColor="@color/purple_500"
@@ -59,7 +59,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
+\
         <!--TextInput UserName -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/ti_user_name_layout"

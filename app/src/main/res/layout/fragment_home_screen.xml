@@ -1,14 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomeScreenFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="500dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_homescreen_fix"
+        android:layout_marginTop="-40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_salam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Assalamualaikum"
+        android:textSize="24dp"
+        android:textColor="@color/white"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rizqi !"
+        android:textSize="50dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/philosopher_bold"
+        app:layout_constraintStart_toStartOf="@id/tv_salam"
+        app:layout_constraintTop_toBottomOf="@id/tv_salam"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_logout"
+        android:layout_marginEnd="14dp"
+        android:backgroundTint="@color/transparant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_salam"
+        app:layout_constraintBottom_toBottomOf="@id/tv_salam"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_nama"
+        android:background="@drawable/menu">
+
+        <ImageButton
+            android:id="@+id/tambahkan_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparant"
+            android:scaleType="fitCenter"
+            android:src="@drawable/btn_catatan_fix"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ic_baca_semua"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/ic_baca_semua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparant"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_catata"
+            app:layout_constraintBottom_toTopOf="@+id/tv_baca_semua"
+            app:layout_constraintStart_toEndOf="@id/tambahkan_menu"
+            app:layout_constraintTop_toTopOf="@id/tambahkan_menu"
+            app:layout_constraintEnd_toStartOf="@id/ic_jadwal"/>
+
+        <TextView
+            android:id="@+id/tv_baca_semua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/baca_catatan"
+            app:layout_constraintStart_toStartOf="@id/ic_baca_semua"
+            app:layout_constraintEnd_toEndOf="@id/ic_baca_semua"
+            app:layout_constraintTop_toBottomOf="@id/ic_baca_semua"
+            app:layout_constraintBottom_toBottomOf="@id/tambahkan_menu"/>
+
+        <ImageButton
+            android:id="@+id/ic_jadwal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparant"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_jadwal"
+            app:layout_constraintBottom_toBottomOf="@id/ic_baca_semua"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ic_baca_semua"
+            app:layout_constraintTop_toTopOf="@id/ic_baca_semua" />
+
+        <TextView
+            android:id="@+id/tv_jadwal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Jadwal"
+            app:layout_constraintStart_toStartOf="@id/ic_jadwal"
+            app:layout_constraintEnd_toEndOf="@id/ic_jadwal"
+            app:layout_constraintTop_toBottomOf="@id/ic_baca_semua"
+            app:layout_constraintBottom_toBottomOf="@id/tambahkan_menu"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

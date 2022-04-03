@@ -8,11 +8,13 @@
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/drawable/button_radius.xml" value="0.2365" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/drawable/color_orange.xml" value="0.2365" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2365" />
+        <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/drawable/menu.xml" value="0.256" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/layout/activity_main.xml" value="0.34479166666666666" />
-        <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/layout/fragment_home_screen.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/layout/fragment_home_screen.xml" value="0.33" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/layout/fragment_login.xml" value="0.2" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/layout/fragment_register.xml" value="0.33" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/layout/fragment_spalsh_screen.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/layout/fragment_splash_screen.xml" value="0.34479166666666666" />
       </map>
     </option>
   </component>
@@ -21,5 +23,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.12" />
+      </ProjectState>
+    </option>
   </component>
 </project>
