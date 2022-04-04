@@ -53,13 +53,13 @@
 
     <ImageView
         android:id="@+id/iv_info_jadwal"
-        android:layout_width="336dp"
-        android:layout_height="wrap_content"
-        android:scaleType="center"
-        android:layout_marginTop="-40dp"
+        android:layout_width="359dp"
+        android:layout_height="233dp"
         android:layout_marginStart="14dp"
+        android:layout_marginTop="-40dp"
         android:layout_marginEnd="14dp"
         android:background="@drawable/bg_jam_fix_dua"
+        android:scaleType="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bg_jadwal" />
