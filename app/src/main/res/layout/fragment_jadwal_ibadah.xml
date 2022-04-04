@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".jadwal_ibadah">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.47" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_jadwal"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:text="Jadwal Ibadah"
+        android:id="@+id/tv_jadwal_ibadah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginRight="14dp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageButton
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:backgroundTint="@color/transparant"
+        android:src="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_jadwal_ibadah"
+        app:layout_constraintBottom_toBottomOf="@id/tv_jadwal_ibadah"/>
+
+    <ImageView
+        android:id="@+id/iv_info_jadwal"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="14dp"
+        android:background="@drawable/info_maseh"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline"
+        app:layout_constraintBottom_toBottomOf="@id/guideline"/>
+
+
+    <!--Sahur-->
+    <TextView
+        android:id="@+id/tv_jadwal_sahur"
+        android:text="Sahur"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/purple_500"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_info_jadwal"/>
+
+    <TextView
+        android:id="@+id/tv_jam_sahur"
+        android:text="07:00"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginEnd="30dp"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_jadwal_sahur"
+        app:layout_constraintBottom_toBottomOf="@id/tv_jadwal_sahur"/>
+
+    <!--Subuh-->
+    <TextView
+        android:id="@+id/tv_jadwal_subuh"
+        android:text="Sholat Subuh"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/purple_500"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_jadwal_sahur"/>
+
+    <TextView
+        android:id="@+id/tv_jam_subuh"
+        android:text="07:00"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginEnd="30dp"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_jadwal_subuh"
+        app:layout_constraintBottom_toBottomOf="@id/tv_jadwal_subuh"/>
+
+
+    <!--Dzuhur-->
+    <TextView
+        android:id="@+id/tv_jadwal_dzuhur"
+        android:text="Sholat Dzuhur"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/purple_500"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_jadwal_subuh"/>
+
+    <TextView
+        android:id="@+id/tv_jam_dzuhur"
+        android:text="07:00"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginEnd="30dp"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_jadwal_dzuhur"
+        app:layout_constraintBottom_toBottomOf="@id/tv_jadwal_dzuhur"/>
+
+    <!--Ashar-->
+    <TextView
+        android:id="@+id/tv_jadwal_ashar"
+        android:text="Sholat Ashar"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/purple_500"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_jadwal_dzuhur"/>
+
+    <TextView
+        android:id="@+id/tv_jam_ashar"
+        android:text="07:00"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginEnd="30dp"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_jadwal_ashar"
+        app:layout_constraintBottom_toBottomOf="@id/tv_jadwal_ashar"/>
+
+    <!--Magrib-->
+    <TextView
+        android:id="@+id/tv_jadwal_magrib"
+        android:text="Sholat Magrib"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/purple_500"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_jadwal_ashar"/>
+
+    <TextView
+        android:id="@+id/tv_jadwal_berbuka"
+        android:text="Berbuka"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/white"
+        android:background="@drawable/button_radius"
+        android:layout_marginStart="10dp"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/tv_jadwal_magrib"
+        app:layout_constraintTop_toTopOf="@id/tv_jadwal_magrib"
+        app:layout_constraintBottom_toBottomOf="@id/tv_jadwal_magrib"/>
+
+
+    <TextView
+        android:id="@+id/tv_jam_magrib"
+        android:text="07:00"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginEnd="30dp"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_jadwal_magrib"
+        app:layout_constraintBottom_toBottomOf="@id/tv_jadwal_magrib"/>
+
+    <!--Ashar-->
+    <TextView
+        android:id="@+id/tv_jadwal_isya"
+        android:text="Sholat Ashar"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/purple_500"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_jadwal_magrib"/>
+
+    <TextView
+        android:id="@+id/tv_jam_isya"
+        android:text="07:00"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginEnd="30dp"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_jadwal_isya"
+        app:layout_constraintBottom_toBottomOf="@id/tv_jadwal_isya"/>
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

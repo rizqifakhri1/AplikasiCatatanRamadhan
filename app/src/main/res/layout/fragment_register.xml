@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:background="@drawable/bg_login_small_fix"
         android:scaleType="center"
-        android:layout_marginTop=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -99,7 +98,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ti_user_name_layout"
-            app:startIconDrawable="@drawable/ic_baseline_person_24"
+            app:startIconDrawable="@drawable/ic_email"
             tools:layout_editor_absoluteY="212dp">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -123,7 +122,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ti_user_email"
-            app:startIconDrawable="@drawable/ic_baseline_person_24"
+            app:startIconDrawable="@drawable/ic_baseline_lock_24"
             tools:layout_editor_absoluteY="212dp">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -146,7 +145,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ti_user_password"
-            app:startIconDrawable="@drawable/ic_baseline_person_24">
+            app:startIconDrawable="@drawable/ic_baseline_lock_24">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ti_user_password_confirm_edit_Text"
@@ -173,7 +172,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="14dp"
-            android:text="Belum Punya Akun? Klik Disini"
+            android:text="Sudah Punya Akun? Klik Disini"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
