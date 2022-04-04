@@ -72,32 +72,9 @@
             android:scaleType="fitCenter"
             android:src="@drawable/btn_catatan_fix"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/ib_baca_semua"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageButton
-            android:id="@+id/ib_baca_semua"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/transparant"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_catatan_fix"
-            app:layout_constraintBottom_toTopOf="@+id/tv_baca_semua"
-            app:layout_constraintStart_toEndOf="@id/tambahkan_menu"
-            app:layout_constraintTop_toTopOf="@id/tambahkan_menu"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@id/ib_jadwal"/>
-
-        <TextView
-            android:id="@+id/tv_baca_semua"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/baca_catatan"
-            app:layout_constraintStart_toStartOf="@id/ib_baca_semua"
-            app:layout_constraintEnd_toEndOf="@id/ib_baca_semua"
-            app:layout_constraintTop_toBottomOf="@id/ib_baca_semua"
-            app:layout_constraintBottom_toBottomOf="@id/tambahkan_menu"/>
 
         <ImageButton
             android:id="@+id/ib_jadwal"
@@ -105,22 +82,11 @@
             android:layout_height="wrap_content"
             android:background="@color/transparant"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_jadwal"
-            app:layout_constraintBottom_toBottomOf="@id/ib_baca_semua"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/ib_baca_semua"
-            app:layout_constraintTop_toTopOf="@id/ib_baca_semua" />
-
-        <TextView
-            android:id="@+id/tv_jadwal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Jadwal"
-            app:layout_constraintStart_toStartOf="@id/ib_jadwal"
-            app:layout_constraintEnd_toEndOf="@id/ib_jadwal"
-            app:layout_constraintTop_toBottomOf="@id/ib_baca_semua"
-            app:layout_constraintBottom_toBottomOf="@id/tambahkan_menu"/>
+            android:src="@drawable/btn_jadwal_ibadah"
+            app:layout_constraintStart_toEndOf="@id/tambahkan_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
