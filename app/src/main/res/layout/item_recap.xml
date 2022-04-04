@@ -3,22 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="6dp"
+    android:layout_marginTop="14dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
         android:id="@+id/iv_star"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:src="@drawable/icon_star"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
         android:layout_marginStart="14dp"
+        android:src="@drawable/icon_star"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_star_puasa_ke"
         android:text="1"
-        android:textSize="26sp"
+        android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
@@ -53,11 +53,10 @@
     <ImageView
         android:id="@+id/iv_container_item"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="70dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="14dp"
         android:background="@drawable/bg_item_radius"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/iv_star"
         app:layout_constraintTop_toTopOf="@id/iv_star"
@@ -68,9 +67,9 @@
         android:text="Puasa Ke - 1"
         android:fontFamily="@font/poppins_bold"
         android:textColor="@color/purple_700"
-        android:textSize="24sp"
+        android:textSize="16sp"
         android:layout_marginStart="14dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@id/iv_container_item"
@@ -82,7 +81,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="14dp"
-        android:layout_marginBottom="14dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="10dp"
         android:fontFamily="@font/poppins_regular"
         android:text="Senin / 04 April 2022"
         app:layout_constraintBottom_toBottomOf="@id/iv_container_item"
@@ -90,11 +90,11 @@
         app:layout_constraintTop_toBottomOf="@id/tv_field_puasa_ke" />
 
     <ImageView
-        android:layout_width="61dp"
-        android:layout_height="52dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginEnd="14dp"
-        android:backgroundTint="@color/transparant"
-        android:src="@drawable/ic_view_more"
+        android:src="@drawable/ic_next"
+        android:background="@drawable/hijau_radius"
         app:layout_constraintBottom_toBottomOf="@id/iv_container_item"
         app:layout_constraintEnd_toEndOf="@id/iv_container_item"
         app:layout_constraintTop_toTopOf="@id/iv_container_item" />
