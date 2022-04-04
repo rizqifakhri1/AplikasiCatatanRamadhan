@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="6dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/iv_star"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/icon_star"
+        android:layout_marginStart="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_star_puasa_ke"
+        android:text="1"
+        android:textSize="26sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintStart_toStartOf="@id/iv_star"
+        app:layout_constraintEnd_toEndOf="@id/iv_star"
+        app:layout_constraintTop_toTopOf="@id/iv_star"
+        app:layout_constraintBottom_toBottomOf="@id/iv_star"/>
+
+    <ImageView
+        android:id="@+id/iv_star_dots_one"
+        android:layout_width="4dp"
+        android:layout_height="9dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/star_dots_single"
+        app:layout_constraintEnd_toEndOf="@id/iv_star"
+        app:layout_constraintStart_toStartOf="@id/iv_star"
+        app:layout_constraintTop_toBottomOf="@id/iv_star"
+        app:layout_constraintBottom_toTopOf="@id/iv_star_dots_two"/>
+
+    <ImageView
+        android:id="@+id/iv_star_dots_two"
+        android:layout_width="4dp"
+        android:layout_height="9dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/star_dots_single"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/iv_star"
+        app:layout_constraintStart_toStartOf="@id/iv_star"
+        app:layout_constraintTop_toBottomOf="@id/iv_star_dots_one" />
+
+    <ImageView
+        android:id="@+id/iv_container_item"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="14dp"
+        android:background="@drawable/bg_item_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_star"
+        app:layout_constraintTop_toTopOf="@id/iv_star"
+        app:layout_constraintBaseline_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_field_puasa_ke"
+        android:text="Puasa Ke - 1"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/purple_700"
+        android:textSize="24sp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/iv_container_item"
+        app:layout_constraintTop_toTopOf="@id/iv_container_item"
+        app:layout_constraintBottom_toTopOf="@id/tv_tgl_puasa"/>
+
+    <TextView
+        android:id="@+id/tv_tgl_puasa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginBottom="14dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Senin / 04 April 2022"
+        app:layout_constraintBottom_toBottomOf="@id/iv_container_item"
+        app:layout_constraintStart_toStartOf="@id/iv_container_item"
+        app:layout_constraintTop_toBottomOf="@id/tv_field_puasa_ke" />
+
+    <ImageView
+        android:layout_width="61dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="14dp"
+        android:backgroundTint="@color/transparant"
+        android:src="@drawable/ic_view_more"
+        app:layout_constraintBottom_toBottomOf="@id/iv_container_item"
+        app:layout_constraintEnd_toEndOf="@id/iv_container_item"
+        app:layout_constraintTop_toTopOf="@id/iv_container_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

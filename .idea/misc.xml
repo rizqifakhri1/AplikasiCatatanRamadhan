@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/drawable/bg_default.xml" value="0.2365" />
+        <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/drawable/bg_item_radius.xml" value="0.256" />
+        <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/drawable/bg_jam_fix.xml" value="0.261" />
+        <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/drawable/bg_jam_fix_dua.xml" value="0.261" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/drawable/bg_login_fix.xml" value="0.131" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/drawable/bg_login_input.xml" value="0.131" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/drawable/bg_login_white.xml" value="0.2365" />
@@ -22,6 +25,7 @@
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/layout/fragment_register.xml" value="0.33" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/layout/fragment_spalsh_screen.xml" value="0.34479166666666666" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/layout/fragment_splash_screen.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/layout/item_recap.xml" value="0.33" />
       </map>
     </option>
   </component>
