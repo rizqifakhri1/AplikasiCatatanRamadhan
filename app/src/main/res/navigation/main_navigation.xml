@@ -21,7 +21,11 @@
         android:id="@+id/homeScreenFragment"
         android:name="com.binar.aplikasicatatanramadhan.HomeScreenFragment"
         android:label="fragment_home_screen"
-        tools:layout="@layout/fragment_home_screen" />
+        tools:layout="@layout/fragment_home_screen" >
+        <action
+            android:id="@+id/action_homeScreenFragment_to_jadwal_ibadah"
+            app:destination="@id/jadwal_ibadah" />
+    </fragment>
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.binar.aplikasicatatanramadhan.RegisterFragment"
@@ -29,6 +33,15 @@
         tools:layout="@layout/fragment_register" >
         <action
             android:id="@+id/action_registerFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jadwal_ibadah"
+        android:name="com.binar.aplikasicatatanramadhan.jadwal_ibadah"
+        android:label="fragment_jadwal_ibadah"
+        tools:layout="@layout/fragment_jadwal_ibadah" >
+        <action
+            android:id="@+id/action_jadwal_ibadah_to_homeScreenFragment"
             app:destination="@id/homeScreenFragment" />
     </fragment>
 </navigation>
