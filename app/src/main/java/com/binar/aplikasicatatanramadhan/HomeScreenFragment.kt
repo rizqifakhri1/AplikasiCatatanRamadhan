@@ -27,5 +27,9 @@ class HomeScreenFragment : Fragment() {
         binding.ibJadwal.setOnClickListener{
             findNavController().navigate(R.id.action_homeScreenFragment_to_jadwal_ibadah)
         }
+
+        binding.ibTambahkanMenu.setOnClickListener {
+            findNavController().navigate(R.id.action_homeScreenFragment_to_inputFormFragment)
+        }
     }
 }

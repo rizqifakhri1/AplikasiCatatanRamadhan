@@ -65,7 +65,7 @@
         android:background="@drawable/menu">
 
         <ImageButton
-            android:id="@+id/tambahkan_menu"
+            android:id="@+id/ib_tambahkan_menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/transparant"
@@ -83,7 +83,7 @@
             android:background="@color/transparant"
             android:scaleType="fitCenter"
             android:src="@drawable/btn_jadwal_ibadah"
-            app:layout_constraintStart_toEndOf="@id/tambahkan_menu"
+            app:layout_constraintStart_toEndOf="@id/ib_tambahkan_menu"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
@@ -126,7 +126,7 @@
         tools:listitem="@layout/item_recap"
         android:background="@drawable/bg_login_white"
         app:layout_constraintTop_toBottomOf="@id/tv_text_catatan_ramadhan"
-        app:layout_constraintBottom_toTopOf="@id/iv_nav_botton"/>
+        app:layout_constraintBottom_toTopOf="@id/iv_nav_button"/>
 
     <TextView
         android:text="Catatan Ramadhan"
@@ -155,7 +155,7 @@
         app:layout_constraintTop_toTopOf="@id/tv_text_catatan_ramadhan" />
 
     <ImageView
-        android:id="@+id/iv_nav_botton"
+        android:id="@+id/iv_nav_button"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/buttom_nav"
@@ -171,10 +171,10 @@
         android:background="@color/transparant"
         android:scaleType="fitCenter"
         android:src="@drawable/ic_tambahkan"
-        app:layout_constraintBottom_toTopOf="@id/iv_nav_botton"
+        app:layout_constraintBottom_toTopOf="@id/iv_nav_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/iv_nav_botton" />
+        app:layout_constraintTop_toTopOf="@id/iv_nav_button" />
 
 
 
