@@ -25,6 +25,12 @@
         <action
             android:id="@+id/action_homeScreenFragment_to_jadwal_ibadah"
             app:destination="@id/jadwal_ibadah" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_inputFormFragment"
+            app:destination="@id/inputFormFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_editInputFragment"
+            app:destination="@id/editInputFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -47,4 +53,14 @@
             app:popUpTo="@id/homeScreenFragment"
             app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/inputFormFragment"
+        android:name="com.binar.aplikasicatatanramadhan.InputFormFragment"
+        android:label="fragment_input_form"
+        tools:layout="@layout/fragment_input_form" />
+    <fragment
+        android:id="@+id/editInputFragment"
+        android:name="com.binar.aplikasicatatanramadhan.EditInputFragment"
+        android:label="fragment_edit_input"
+        tools:layout="@layout/fragment_edit_input" />
 </navigation>

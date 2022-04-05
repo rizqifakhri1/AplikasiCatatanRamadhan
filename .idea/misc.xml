@@ -14,16 +14,22 @@
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/drawable/buttom_nav.xml" value="0.126" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/drawable/button_radius.xml" value="0.2365" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/drawable/color_orange.xml" value="0.2365" />
+        <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/drawable/custom_checkbox.xml" value="0.256" />
+        <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/drawable/form_puasa.xml" value="0.186" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/drawable/hijau_radius.xml" value="0.261" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2365" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/drawable/ic_email.xml" value="0.256" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1765" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/drawable/ic_next.xml" value="0.256" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/drawable/info_maseh.xml" value="0.256" />
+        <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/drawable/input_form_catatan.xml" value="0.186" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/drawable/menu.xml" value="0.256" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/drawable/recap.xml" value="0.256" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/layout/activity_main.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/layout/form_input.xml" value="0.33" />
+        <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/layout/fragment_edit_input.xml" value="0.12" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/layout/fragment_home_screen.xml" value="0.33" />
+        <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/layout/fragment_input_form.xml" value="0.25" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/layout/fragment_jadwal_ibadah.xml" value="0.25" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/layout/fragment_login.xml" value="0.33" />
         <entry key="..\:/Users/rizqi/AndroidStudioProjects/AplikasiCatatanRamadhan/app/src/main/res/layout/fragment_register.xml" value="0.33" />
