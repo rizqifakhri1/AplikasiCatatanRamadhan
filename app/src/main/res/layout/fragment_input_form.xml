@@ -39,7 +39,7 @@
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
-                android:id="@+id/tv_header_ramadhan"
+                android:id="@+id/tv_header_edit_ramadhan"
                 android:text="Catatan Ramadhan"
                 android:fontFamily="@font/poppins_bold"
                 android:textColor="@color/purple_700"
@@ -66,7 +66,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_header_ramadhan"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_header_edit_ramadhan"/>
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -126,7 +126,7 @@
                 android:inputType="textMultiLine"
                 android:lines="8"
                 android:maxLines="15"
-                android:minLines="10"
+                android:minLines="8"
                 android:padding="10dp"
                 android:scrollbars="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"

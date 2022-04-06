@@ -7,205 +7,221 @@
     tools:context=".EditInputFragment">
 
 
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="center"
-        android:src="@drawable/bg_form"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <View
-        android:layout_width="100dp"
-        android:layout_height="6dp"
-        android:layout_margin="14dp"
-        android:background="@drawable/hijau_radius"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:id="@+id/tv_header_ramadhan"
-        android:text="Edit Catatan Ramadhan"
-        android:fontFamily="@font/poppins_bold"
-        android:textColor="@color/purple_700"
-        android:textSize="24sp"
-        android:layout_marginTop="40dp"
-        android:layout_marginStart="14dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <ImageView
-        android:layout_width="32dp"
-        android:layout_height="31dp"
-        android:layout_marginEnd="14dp"
-        android:src="@drawable/ic_hapus"
-        app:layout_constraintBottom_toBottomOf="@id/tv_header_ramadhan"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_header_ramadhan" />
-
-    <TextView
-        android:id="@+id/tv_form_puasa"
-        android:text="Apakah Anda Berpuasa ?"
-        android:fontFamily="@font/poppins_bold"
-        android:textColor="@color/white"
-        android:background="@drawable/form_puasa"
-        android:layout_marginStart="14dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginTop="14dp"
-        android:padding="14dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_header_ramadhan"/>
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:button="@null"
-        android:drawableStart="@drawable/custom_checkbox"
-        app:layout_constraintBottom_toBottomOf="@id/tv_form_puasa"
-        app:layout_constraintEnd_toEndOf="@id/tv_form_puasa"
-        app:layout_constraintTop_toTopOf="@id/tv_form_puasa" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:id="@+id/ti_template_hari"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_margin="14dp"
-        android:hint="Ramadhan Hari Ke?"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_form_puasa">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ti_input_hari"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:id="@+id/ti_template_tanggal"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_margin="14dp"
-        android:hint="Sekarang Tanggal Berapa? (Hari, Tanggal)"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ti_template_hari">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ti_input_taggal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <EditText
-        android:id="@+id/et_input_catatan"
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="14dp"
-        android:background="@drawable/input_form_catatan"
-        android:gravity="top|start"
-        android:hint="Tuliskan Catatan Kamu Disini"
-        android:inputType="textMultiLine"
-        android:lines="8"
-        android:maxLines="15"
-        android:minLines="10"
-        android:padding="10dp"
-        android:scrollbars="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cb_input_tahajud" />
-
-    <!--Baris Satu-->
-    <CheckBox
-        android:id="@+id/cb_input_sholat"
-        android:text="Sholat 5 Waktu"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="14dp"
-        android:layout_width="175dp"
-        android:layout_height="25dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ti_template_tanggal"/>
-
-    <CheckBox
-        android:id="@+id/cb_input_tarawih"
-        android:text="Sholat Tarawih"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="14dp"
-        android:layout_width="175dp"
-        android:layout_height="25dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cb_input_sholat"/>
-
-    <CheckBox
-        android:id="@+id/cb_input_tahajud"
-        android:text="Sholat Tahajud"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="14dp"
-        android:layout_width="175dp"
-        android:layout_height="25dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cb_input_tarawih"/>
-
-
-    <CheckBox
-        android:id="@+id/cb_input_quran"
-        android:layout_width="175dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="14dp"
-        android:text="Membaca Al-Quran"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ti_template_tanggal" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/iv_nav_button">
 
-    <CheckBox
-        android:id="@+id/cb_input_sedekah"
-        android:layout_width="175dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="14dp"
-        android:text="Sedekah / Infaq"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cb_input_quran" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <CheckBox
-        android:id="@+id/cb_input_kajian"
-        android:layout_width="175dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="14dp"
-        android:text="Mengikuti Kajian"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cb_input_sedekah" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:src="@drawable/bg_form"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="6dp"
+                android:layout_margin="14dp"
+                android:background="@drawable/hijau_radius"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_header_edit_ramadhan"
+                android:text="Edit Catatan Ramadhan"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/purple_700"
+                android:textSize="20sp"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="31dp"
+                android:layout_marginEnd="14dp"
+                android:src="@drawable/ic_hapus"
+                app:layout_constraintBottom_toBottomOf="@id/tv_header_edit_ramadhan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_header_edit_ramadhan" />
+
+            <TextView
+                android:id="@+id/tv_form_puasa"
+                android:text="Apakah Anda Berpuasa ?"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                android:background="@drawable/form_puasa"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginTop="14dp"
+                android:padding="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_header_edit_ramadhan"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableStart="@drawable/custom_checkbox"
+                app:layout_constraintBottom_toBottomOf="@id/tv_form_puasa"
+                app:layout_constraintEnd_toEndOf="@id/tv_form_puasa"
+                app:layout_constraintTop_toTopOf="@id/tv_form_puasa" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/ti_template_hari"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_margin="14dp"
+                android:hint="Ramadhan Hari Ke?"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_form_puasa">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ti_input_hari"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/ti_template_tanggal"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_margin="14dp"
+                android:hint="Sekarang Tanggal Berapa? (Hari, Tanggal)"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ti_template_hari">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ti_input_taggal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <EditText
+                android:id="@+id/et_input_catatan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="14dp"
+                android:background="@drawable/input_form_catatan"
+                android:gravity="top|start"
+                android:hint="Tuliskan Catatan Kamu Disini"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:maxLines="15"
+                android:minLines="8"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cb_input_tahajud"/>
+
+            <!--Baris Satu-->
+            <CheckBox
+                android:id="@+id/cb_input_sholat"
+                android:text="Sholat 5 Waktu"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="14dp"
+                android:layout_width="175dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ti_template_tanggal"/>
+
+            <CheckBox
+                android:id="@+id/cb_input_tarawih"
+                android:text="Sholat Tarawih"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="14dp"
+                android:layout_width="175dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cb_input_sholat"/>
+
+            <CheckBox
+                android:id="@+id/cb_input_tahajud"
+                android:text="Sholat Tahajud"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="14dp"
+                android:layout_width="175dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cb_input_tarawih"/>
+
+
+            <CheckBox
+                android:id="@+id/cb_input_quran"
+                android:layout_width="175dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="14dp"
+                android:text="Membaca Al-Quran"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ti_template_tanggal" />
+
+            <CheckBox
+                android:id="@+id/cb_input_sedekah"
+                android:layout_width="175dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="14dp"
+                android:text="Sedekah / Infaq"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cb_input_quran" />
+
+            <CheckBox
+                android:id="@+id/cb_input_kajian"
+                android:layout_width="175dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="14dp"
+                android:text="Mengikuti Kajian"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cb_input_sedekah" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
     <ImageView
         android:id="@+id/iv_nav_button"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@drawable/buttom_nav"
         android:layout_marginLeft="14dp"
         android:layout_marginRight="14dp"
+        android:background="@drawable/buttom_nav"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/ib_update"
         android:layout_width="182dp"
         android:layout_height="66dp"
         android:background="@color/transparant"
@@ -215,8 +231,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/iv_nav_button" />
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
