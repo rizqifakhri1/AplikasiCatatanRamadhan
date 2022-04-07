@@ -63,8 +63,8 @@
         app:layout_constraintBaseline_toBottomOf="parent"/>
 
     <TextView
-        android:id="@+id/tv_input_puasa_ke"
-        android:text="Puasa Ke - 1"
+        android:id="@+id/tv_text"
+        android:text="Puasa Hari Ke -"
         android:fontFamily="@font/poppins_bold"
         android:textColor="@color/purple_700"
         android:textSize="16sp"
@@ -73,6 +73,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@id/iv_container_item"
+        app:layout_constraintTop_toTopOf="@id/iv_container_item"
+        app:layout_constraintBottom_toTopOf="@id/tv_input_tgl_puasa"/>
+
+    <TextView
+        android:id="@+id/tv_input_puasa_ke"
+        android:text="1"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/purple_700"
+        android:textSize="16sp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/tv_text"
         app:layout_constraintTop_toTopOf="@id/iv_container_item"
         app:layout_constraintBottom_toTopOf="@id/tv_input_tgl_puasa"/>
 

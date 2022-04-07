@@ -4,12 +4,11 @@ import android.app.AlertDialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,7 +16,6 @@ import com.binar.aplikasicatatanramadhan.databinding.FragmentEditInputBinding
 import com.binar.aplikasicatatanramadhan.databinding.FragmentHomeScreenBinding
 import com.binar.aplikasicatatanramadhan.databinding.FragmentInputFormBinding
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
@@ -29,7 +27,7 @@ class HomeScreenFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentHomeScreenBinding.inflate(layoutInflater)
         return (binding.root)
@@ -46,7 +44,8 @@ class HomeScreenFragment : Fragment() {
             findNavController().navigate(R.id.action_homeScreenFragment_to_jadwal_ibadah)
         }
 
-        binding.ibTambahkanMenu.setOnClickListener {
+        // Menambahkan Data
+        binding.ibCatatanDua.setOnClickListener {
             /*findNavController().navigate(R.id.action_homeScreenFragment_to_inputFormFragment)*/
             val dialogBinding =
                 FragmentInputFormBinding.inflate(LayoutInflater.from(requireContext()))
@@ -88,6 +87,7 @@ class HomeScreenFragment : Fragment() {
         }
     }
 
+
     fun fetchData() {
         lifecycleScope.launch(Dispatchers.IO) {
             val listRamadhan = mDB?.ramadhanDao()?.getAllData()
@@ -98,14 +98,14 @@ class HomeScreenFragment : Fragment() {
                         it,
                         details = { RamadhanEntity ->
                             //Letak code
-                            Toast.makeText(requireContext(), "Testing", Toast.LENGTH_SHORT).show()
+                            //Toast.makeText(requireContext(), "Testing", Toast.LENGTH_SHORT).show()
 
                             val dialogBinding =
                                 FragmentEditInputBinding.inflate(LayoutInflater.from(requireContext()))
                             val dialogBuilder = AlertDialog.Builder(requireContext())
                             dialogBuilder.setView(dialogBinding.root)
                             val dialog = dialogBuilder.create()
-                            dialog.setCancelable(false)
+                            dialog.setCancelable(true)
                             dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
                             if (RamadhanEntity.berpuasa) {
@@ -115,6 +115,7 @@ class HomeScreenFragment : Fragment() {
                             dialogBinding.tiInputTaggal.setText(RamadhanEntity.tanggal)
                             dialogBinding.etInputCatatan.setText(RamadhanEntity.catatan)
 
+                            //Update data
                             dialogBinding.ibUpdate.setOnClickListener {
                                 val data = RamadhanEntity(
                                     RamadhanEntity.id,
@@ -123,6 +124,7 @@ class HomeScreenFragment : Fragment() {
                                     dialogBinding.tiInputTaggal.text.toString(),
                                     dialogBinding.etInputCatatan.text.toString()
                                 )
+                                dialog.setCancelable(true)
                                 lifecycleScope.launch(Dispatchers.IO) {
                                     val result = mDB?.ramadhanDao()?.updateRamadhan(data)
                                     runBlocking(Dispatchers.Main) {

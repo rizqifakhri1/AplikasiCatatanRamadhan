@@ -166,6 +166,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
+        android:id="@+id/ib_catatan_dua"
         android:layout_width="182dp"
         android:layout_height="66dp"
         android:background="@color/transparant"
