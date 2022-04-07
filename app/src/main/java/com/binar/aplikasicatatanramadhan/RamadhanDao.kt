@@ -2,7 +2,9 @@ package com.binar.aplikasicatatanramadhan
 
 import androidx.room.*
 
-interface RamadhanDao {
+
+@Dao
+ interface RamadhanDao {
     @Query("SELECT * FROM RamadhanEntity")
     fun getAllData(): List<RamadhanEntity>
 

@@ -9,7 +9,7 @@ import kotlinx.parcelize.Parcelize
 @Entity
 @Parcelize //Optional -> Kalo buat database optional
 data class RamadhanEntity (
-         @PrimaryKey(autoGenerate = true) var id : Int = 0,
+         @PrimaryKey(autoGenerate = true) var id : Int?,
          @ColumnInfo(name = "berpuasa") var berpuasa: Boolean,
          @ColumnInfo(name = "hari") var hari: Int,
          @ColumnInfo(name = "tanggal") var tanggal: String,

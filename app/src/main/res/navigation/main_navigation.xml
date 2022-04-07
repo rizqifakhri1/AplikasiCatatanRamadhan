@@ -14,10 +14,8 @@
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
         <action
-            android:id="@+id/action_loginFragment_to_homeScreenFragment"
-            app:destination="@id/homeScreenFragment"
-            app:launchSingleTop="false"
-            app:popUpToInclusive="false" />
+            android:id="@+id/action_loginFragment_to_homeScreenFragment3"
+            app:destination="@id/homeScreenFragment" />
     </fragment>
     <fragment
         android:id="@+id/homeScreenFragment"
