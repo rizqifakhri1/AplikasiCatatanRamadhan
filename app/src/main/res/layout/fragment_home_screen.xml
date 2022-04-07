@@ -122,7 +122,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="14dp"
-
         tools:listitem="@layout/item_recap"
         android:background="@drawable/bg_login_white"
         app:layout_constraintTop_toBottomOf="@id/tv_text_catatan_ramadhan"
