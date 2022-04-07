@@ -61,7 +61,13 @@ class HomeScreenFragment : Fragment() {
                     dialogBinding.cbPuasa.isChecked,
                     dialogBinding.tiInputHari.text.toString().toInt(),
                     dialogBinding.tiInputTaggal.text.toString(),
-                    dialogBinding.etInputCatatan.text.toString()
+                    dialogBinding.etInputCatatan.text.toString(),
+                    dialogBinding.cbInputSholat.isChecked,
+                    dialogBinding.cbInputTarawih.isChecked,
+                    dialogBinding.cbInputTahajud.isChecked,
+                    dialogBinding.cbInputQuran.isChecked,
+                    dialogBinding.cbInputSedekah.isChecked,
+                    dialogBinding.cbInputKajian.isChecked
                 )
                 lifecycleScope.launch(Dispatchers.IO) {
                     val result = mDB?.ramadhanDao()?.insertRamadhan(data)
@@ -116,6 +122,25 @@ class HomeScreenFragment : Fragment() {
                             dialogBinding.tiInputTaggal.setText(RamadhanEntity.tanggal)
                             dialogBinding.etInputCatatan.setText(RamadhanEntity.catatan)
 
+                            if (RamadhanEntity.lima_waktu) {
+                                dialogBinding.cbInputSholat.isChecked = true
+                            }
+                            if (RamadhanEntity.tarawih) {
+                                dialogBinding.cbInputTarawih.isChecked = true
+                            }
+                            if (RamadhanEntity.tahajud) {
+                                dialogBinding.cbInputTahajud.isChecked = true
+                            }
+                            if (RamadhanEntity.quran) {
+                                dialogBinding.cbInputQuran.isChecked = true
+                            }
+                            if (RamadhanEntity.sedekah) {
+                                dialogBinding.cbInputSedekah.isChecked = true
+                            }
+                            if (RamadhanEntity.kajian) {
+                                dialogBinding.cbInputKajian.isChecked = true
+                            }
+
                             //Update data
                             dialogBinding.ibUpdate.setOnClickListener {
                                 val data = RamadhanEntity(
@@ -123,7 +148,13 @@ class HomeScreenFragment : Fragment() {
                                     dialogBinding.cbPuasa.isChecked,
                                     dialogBinding.tiInputHari.text.toString().toInt(),
                                     dialogBinding.tiInputTaggal.text.toString(),
-                                    dialogBinding.etInputCatatan.text.toString()
+                                    dialogBinding.etInputCatatan.text.toString(),
+                                    dialogBinding.cbInputSholat.isChecked,
+                                    dialogBinding.cbInputTarawih.isChecked,
+                                    dialogBinding.cbInputTahajud.isChecked,
+                                    dialogBinding.cbInputQuran.isChecked,
+                                    dialogBinding.cbInputSedekah.isChecked,
+                                    dialogBinding.cbInputKajian.isChecked,
                                 )
                                 dialog.setCancelable(true)
                                 lifecycleScope.launch(Dispatchers.IO) {
