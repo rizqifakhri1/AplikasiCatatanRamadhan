@@ -46,13 +46,14 @@ class HomeScreenFragment : Fragment() {
 
         // Menambahkan Data
         binding.ibCatatanDua.setOnClickListener {
-            /*findNavController().navigate(R.id.action_homeScreenFragment_to_inputFormFragment)*/
             val dialogBinding =
                 FragmentInputFormBinding.inflate(LayoutInflater.from(requireContext()))
+
             val dialogBuilder = AlertDialog.Builder(requireContext())
             dialogBuilder.setView(dialogBinding.root)
+
             val dialog = dialogBuilder.create()
-            /*dialog.setCancelable(false)*/
+
             dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             dialogBinding.ibSimpan.setOnClickListener {
                 val data = RamadhanEntity(
