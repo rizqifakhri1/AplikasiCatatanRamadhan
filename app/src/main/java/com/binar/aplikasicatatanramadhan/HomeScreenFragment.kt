@@ -52,55 +52,18 @@ class HomeScreenFragment : Fragment() {
             findNavController().navigate(R.id.action_homeScreenFragment_to_jadwal_ibadah)
         }
 
+        binding.ibCatatanSatu.setOnClickListener {
+            catatan()
+        }
+
+
         // Menambahkan Data
         binding.ibCatatanDua.setOnClickListener {
-            val dialogBinding =  FragmentInputFormBinding.inflate(LayoutInflater.from(requireContext()))
-
-            val dialogBuilder = AlertDialog.Builder(requireContext())
-            dialogBuilder.setView(dialogBinding.root)
-
-            val dialog = dialogBuilder.create()
-
-            dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-
-            dialogBinding.ibSimpan.setOnClickListener {
-                val data = RamadhanEntity(
-                    null,
-                    dialogBinding.cbPuasa.isChecked,
-                    dialogBinding.tiInputHari.text.toString().toInt(),
-                    dialogBinding.tiInputTaggal.text.toString(),
-                    dialogBinding.etInputCatatan.text.toString(),
-                    dialogBinding.cbInputSholat.isChecked,
-                    dialogBinding.cbInputTarawih.isChecked,
-                    dialogBinding.cbInputTahajud.isChecked,
-                    dialogBinding.cbInputQuran.isChecked,
-                    dialogBinding.cbInputSedekah.isChecked,
-                    dialogBinding.cbInputKajian.isChecked
-                )
-                lifecycleScope.launch(Dispatchers.IO) {
-                    val result = mDB?.ramadhanDao()?.insertRamadhan(data)
-                    runBlocking(Dispatchers.Main) {
-                        if (result != 0.toLong()) {
-                            Toast.makeText(
-                                requireContext(),
-                                "Berhasil Ditambahkan",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        } else {
-                            Toast.makeText(
-                                requireContext(),
-                                "Gagal Menambahkan",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        }
-                        fetchData()
-                        dialog.dismiss()
-                    }
-                }
-            }
-            dialog.show()
+            catatan()
         }
+
     }
+
 
 
     fun fetchData() {
@@ -223,6 +186,55 @@ class HomeScreenFragment : Fragment() {
             }
         }
     }
+
+     private fun catatan() {
+        val dialogBinding =  FragmentInputFormBinding.inflate(LayoutInflater.from(requireContext()))
+
+        val dialogBuilder = AlertDialog.Builder(requireContext())
+        dialogBuilder.setView(dialogBinding.root)
+
+        val dialog = dialogBuilder.create()
+
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+        dialogBinding.ibSimpan.setOnClickListener {
+            val data = RamadhanEntity(
+                null,
+                dialogBinding.cbPuasa.isChecked,
+                dialogBinding.tiInputHari.text.toString().toInt(),
+                dialogBinding.tiInputTaggal.text.toString(),
+                dialogBinding.etInputCatatan.text.toString(),
+                dialogBinding.cbInputSholat.isChecked,
+                dialogBinding.cbInputTarawih.isChecked,
+                dialogBinding.cbInputTahajud.isChecked,
+                dialogBinding.cbInputQuran.isChecked,
+                dialogBinding.cbInputSedekah.isChecked,
+                dialogBinding.cbInputKajian.isChecked
+            )
+            lifecycleScope.launch(Dispatchers.IO) {
+                val result = mDB?.ramadhanDao()?.insertRamadhan(data)
+                runBlocking(Dispatchers.Main) {
+                    if (result != 0.toLong()) {
+                        Toast.makeText(
+                            requireContext(),
+                            "Berhasil Ditambahkan",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    } else {
+                        Toast.makeText(
+                            requireContext(),
+                            "Gagal Menambahkan",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    fetchData()
+                    dialog.dismiss()
+                }
+            }
+        }
+        dialog.show()
+    }
+
 
     private fun userLogout() {
         binding.ibLogout.setOnClickListener {

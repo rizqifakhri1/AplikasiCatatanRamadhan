@@ -66,7 +66,7 @@
         android:background="@drawable/menu">
 
         <ImageButton
-            android:id="@+id/ib_tambahkan_menu"
+            android:id="@+id/ib_catatan_satu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/transparant"
@@ -84,7 +84,7 @@
             android:background="@color/transparant"
             android:scaleType="fitCenter"
             android:src="@drawable/btn_jadwal_ibadah"
-            app:layout_constraintStart_toEndOf="@id/ib_tambahkan_menu"
+            app:layout_constraintStart_toEndOf="@id/ib_catatan_satu"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
