@@ -41,6 +41,8 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         mDb = RamadhanDatabase.getInstance(requireContext())
 
+
+        //Implementasi SharedPreferences
         val preferences = this.activity?.getSharedPreferences(LOGINUSER, Context.MODE_PRIVATE)
         if (preferences!!.getString(USERNAME, null) != null ) {
             findNavController().navigate(R.id.action_loginFragment_to_homeScreenFragment3)

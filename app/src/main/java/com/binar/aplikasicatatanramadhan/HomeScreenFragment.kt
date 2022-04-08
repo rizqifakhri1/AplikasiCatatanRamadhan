@@ -61,6 +61,9 @@ class HomeScreenFragment : Fragment() {
         binding.ibCatatanDua.setOnClickListener {
             catatan()
         }
+        binding.ivKosong.setOnClickListener {
+            catatan()
+        }
 
     }
 
@@ -72,6 +75,12 @@ class HomeScreenFragment : Fragment() {
 
             runBlocking(Dispatchers.Main) {
                 listRamadhan?.let {
+
+                    if (RamadhanAdapter(it, {}).itemCount ==0) {
+                        binding.ivKosong.visibility = View.VISIBLE
+                    } else {
+                        binding.ivKosong.visibility = View.GONE
+                    }
                     val adapter = RamadhanAdapter(
                         it,
                         details = { RamadhanEntity ->
