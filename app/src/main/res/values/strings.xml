@@ -47,4 +47,5 @@
     <string name="text_star">1</string>
     <string name="puasa_hari_ke">Puasa Hari Ke -</string>
     <string name="tanggal_rv">Senin / 04 April 2022</string>
+    <string name="wajib">* Wajib untuk mengisi hari</string>
 </resources>
