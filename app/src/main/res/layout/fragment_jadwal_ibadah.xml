@@ -9,7 +9,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/bg_jadwal"
@@ -19,17 +19,18 @@
             android:scaleType="fitXY"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/background" />
 
 
         <TextView
-            android:text="Jadwal Ibadah"
+            android:text="@string/jadwal_ibadah"
             android:id="@+id/tv_jadwal_ibadah"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:layout_marginStart="14dp"
-            android:layout_marginRight="14dp"
+            android:layout_marginEnd="14dp"
             android:textColor="@color/white"
             android:textSize="24sp"
             android:fontFamily="@font/poppins_bold"
@@ -46,7 +47,8 @@
             android:src="@drawable/back"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/tv_jadwal_ibadah"
-            app:layout_constraintBottom_toBottomOf="@id/tv_jadwal_ibadah"/>
+            app:layout_constraintBottom_toBottomOf="@id/tv_jadwal_ibadah"
+            android:contentDescription="@string/button" />
 
 
         <ImageView
@@ -60,7 +62,8 @@
             android:scaleType="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/bg_jadwal" />
+            app:layout_constraintTop_toBottomOf="@id/bg_jadwal"
+            android:contentDescription="@string/background" />
 
         <ImageView
             android:id="@+id/iv_binar"
@@ -70,7 +73,8 @@
             android:background="@drawable/binar_halo"
             android:scaleType="fitStart"
             app:layout_constraintBottom_toBottomOf="@id/iv_info_jadwal"
-            app:layout_constraintStart_toStartOf="@id/iv_info_jadwal" />
+            app:layout_constraintStart_toStartOf="@id/iv_info_jadwal"
+            android:contentDescription="@string/karakter" />
 
 
         <TextView
@@ -79,7 +83,7 @@
             android:layout_height="128dp"
             android:layout_marginEnd="14dp"
             android:fontFamily="@font/poppins_bold"
-            android:text="Sekarang Sudah Jam"
+            android:text="@string/sekarang_sudah_jam"
             android:textColor="@color/purple_700"
             android:textSize="28sp"
             app:layout_constraintBottom_toTopOf="@id/tc_jam"
@@ -114,7 +118,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/poppins_bold"
-            android:text="Imsak"
+            android:text="@string/imsak"
             android:textColor="@color/purple_500"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -126,7 +130,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="30dp"
             android:fontFamily="@font/poppins_regular"
-            android:text="04:15"
+            android:text="@string/jam_imsak"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@id/tv_jadwal_imsak"
             app:layout_constraintEnd_toEndOf="parent"
@@ -140,7 +144,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/poppins_bold"
-            android:text="Sholat Subuh"
+            android:text="@string/sholat_subuh"
             android:textColor="@color/purple_500"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -152,7 +156,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="30dp"
             android:fontFamily="@font/poppins_regular"
-            android:text="04:34"
+            android:text="@string/jam_subuh"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@id/tv_jadwal_subuh"
             app:layout_constraintEnd_toEndOf="parent"
@@ -167,7 +171,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/poppins_bold"
-            android:text="Sholat Dzuhur"
+            android:text="@string/sholat_dzuhur"
             android:textColor="@color/purple_500"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -179,7 +183,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="30dp"
             android:fontFamily="@font/poppins_regular"
-            android:text="11:52"
+            android:text="@string/jam_dzuhur"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@id/tv_jadwal_dzuhur"
             app:layout_constraintEnd_toEndOf="parent"
@@ -193,7 +197,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/poppins_bold"
-            android:text="Sholat Ashar"
+            android:text="@string/sholat_ashar"
             android:textColor="@color/purple_500"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -205,7 +209,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="30dp"
             android:fontFamily="@font/poppins_regular"
-            android:text="15:10"
+            android:text="@string/jam_ashar"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@id/tv_jadwal_ashar"
             app:layout_constraintEnd_toEndOf="parent"
@@ -219,7 +223,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/poppins_bold"
-            android:text="Sholat Magrib"
+            android:text="@string/sholat_magrib"
             android:textColor="@color/purple_500"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -235,7 +239,7 @@
             android:fontFamily="@font/poppins_regular"
             android:paddingStart="14dp"
             android:paddingEnd="14dp"
-            android:text="Berbuka"
+            android:text="@string/berbuka"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="@id/tv_jadwal_magrib"
             app:layout_constraintStart_toEndOf="@id/tv_jadwal_magrib"
@@ -248,7 +252,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="30dp"
             android:fontFamily="@font/poppins_regular"
-            android:text="17:53"
+            android:text="@string/jam_magrib"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@id/tv_jadwal_magrib"
             app:layout_constraintEnd_toEndOf="parent"
@@ -262,7 +266,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/poppins_bold"
-            android:text="Sholat Isya"
+            android:text="@string/sholat_isya"
             android:textColor="@color/purple_500"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -274,7 +278,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="30dp"
             android:fontFamily="@font/poppins_regular"
-            android:text="19:02"
+            android:text="@string/jam_isya"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@id/tv_jadwal_isya"
             app:layout_constraintEnd_toEndOf="parent"

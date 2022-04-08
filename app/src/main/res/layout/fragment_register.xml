@@ -15,7 +15,8 @@
         android:scaleType="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/background" />
 
     <!--Icon Handder Catatan Ramadhan-->
     <ImageView
@@ -28,7 +29,8 @@
         app:layout_constraintBottom_toTopOf="@id/bg_login_white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/icon" />
 
     <!--Constraint untuk nampung bg putih-->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -53,14 +55,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
             android:fontFamily="@font/poppins_bold"
-            android:text="Register"
+            android:text="@string/register"
             android:textColor="@color/purple_500"
             android:textSize="40sp"
             app:layout_constraintBottom_toTopOf="@id/ti_user_name_layout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-\
+
         <!--TextInput UserName -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/ti_user_name_layout"
@@ -71,7 +73,7 @@
             android:layout_marginStart="14dp"
             android:layout_marginEnd="14dp"
             app:errorEnabled="true"
-            android:hint="Masukan Username"
+            android:hint="@string/masukan_username"
             app:layout_constraintBottom_toTopOf="@id/ti_user_email_layout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -95,7 +97,7 @@
             android:layout_marginTop="14dp"
             android:layout_marginStart="14dp"
             android:layout_marginEnd="14dp"
-            android:hint="Masukan Email"
+            android:hint="@string/masukan_email"
             app:errorEnabled="true"
             app:layout_constraintBottom_toTopOf="@id/ti_user_password_layout"
             app:layout_constraintEnd_toEndOf="parent"
@@ -120,7 +122,7 @@
             android:layout_marginTop="14dp"
             android:layout_marginStart="14dp"
             android:layout_marginEnd="14dp"
-            android:hint="Masukan Password"
+            android:hint="@string/masukan_password"
             app:errorEnabled="true"
             app:layout_constraintBottom_toTopOf="@id/ti_user_password_confirm_layout"
             app:layout_constraintEnd_toEndOf="parent"
@@ -146,7 +148,7 @@
             android:layout_marginStart="14dp"
             android:layout_marginEnd="14dp"
             app:errorEnabled="true"
-            android:hint="Masukan Kembali Password"
+            android:hint="@string/masukan_kembali_password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ti_user_password_layout"
@@ -167,7 +169,7 @@
             android:layout_marginEnd="14dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/button_radius"
-            android:text="Register"
+            android:text="@string/register"
             app:layout_constraintBottom_toTopOf="@id/tv_login_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -177,7 +179,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="14dp"
-            android:text="Sudah Punya Akun? Klik Disini"
+            android:text="@string/sudah_punya_akun_klik_disini"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

@@ -17,7 +17,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -28,7 +28,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.489"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/background" />
 
             <View
                 android:layout_width="100dp"
@@ -46,7 +47,7 @@
                 android:layout_marginStart="14dp"
                 android:layout_marginTop="40dp"
                 android:fontFamily="@font/poppins_bold"
-                android:text="Catatan Ramadhan"
+                android:text="@string/catatan_ramadhan"
                 android:textColor="@color/purple_700"
                 android:textSize="26sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +64,7 @@
                 android:background="@drawable/form_puasa"
                 android:fontFamily="@font/poppins_bold"
                 android:padding="14dp"
-                android:text="Apakah Anda Berpuasa ?"
+                android:text="@string/apakah_anda_berpuasa"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -85,7 +86,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="14dp"
-                android:hint="Ramadhan Hari Ke?"
+                android:hint="@string/ramadhan_hari_ke"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_form_puasa">
@@ -105,7 +106,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="14dp"
-                android:hint="Sekarang Tanggal Berapa? (Hari, Tanggal)"
+                android:hint="@string/tanggal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ti_template_hari">
@@ -125,7 +126,7 @@
                 android:layout_margin="14dp"
                 android:background="@drawable/input_form_catatan"
                 android:gravity="top|start"
-                android:hint="Tuliskan Catatan Kamu Disini"
+                android:hint="@string/tuliskan_catatan_kamu_disini"
                 android:inputType="textMultiLine"
                 android:lines="8"
                 android:maxLines="15"
@@ -134,7 +135,8 @@
                 android:scrollbars="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cb_input_tahajud" />
+                app:layout_constraintTop_toBottomOf="@id/cb_input_tahajud"
+                android:autofillHints="name" />
 
             <!--Baris Satu-->
             <CheckBox
@@ -143,7 +145,7 @@
                 android:layout_height="25dp"
                 android:layout_marginStart="14dp"
                 android:layout_marginTop="14dp"
-                android:text="Sholat 5 Waktu"
+                android:text="@string/sholat_5_waktu"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ti_template_tanggal" />
 
@@ -153,7 +155,7 @@
                 android:layout_height="25dp"
                 android:layout_marginStart="14dp"
                 android:layout_marginTop="14dp"
-                android:text="Sholat Tarawih"
+                android:text="@string/sholat_tarawih"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/cb_input_sholat" />
 
@@ -163,7 +165,7 @@
                 android:layout_height="25dp"
                 android:layout_marginStart="14dp"
                 android:layout_marginTop="14dp"
-                android:text="Sholat Tahajud"
+                android:text="@string/sholat_tahajud"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/cb_input_tarawih" />
 
@@ -174,7 +176,7 @@
                 android:layout_height="25dp"
                 android:layout_marginTop="14dp"
                 android:layout_marginEnd="14dp"
-                android:text="Membaca Al-Quran"
+                android:text="@string/membaca_quran"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ti_template_tanggal" />
 
@@ -184,7 +186,7 @@
                 android:layout_height="25dp"
                 android:layout_marginTop="14dp"
                 android:layout_marginEnd="14dp"
-                android:text="Sedekah / Infaq"
+                android:text="@string/sedekah_infaq"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/cb_input_quran" />
 
@@ -194,7 +196,7 @@
                 android:layout_height="25dp"
                 android:layout_marginTop="14dp"
                 android:layout_marginEnd="14dp"
-                android:text="Mengikuti Kajian"
+                android:text="@string/mengikuti_kajian"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/cb_input_sedekah" />
 
@@ -210,7 +212,8 @@
                 app:layout_constraintTop_toBottomOf="@id/et_input_catatan"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                android:contentDescription="@string/button" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

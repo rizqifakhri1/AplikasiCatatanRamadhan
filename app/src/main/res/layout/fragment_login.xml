@@ -15,7 +15,8 @@
         android:scaleType="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/icon" />
 
     <!--Icon Handder Catatan Ramadhan-->
     <ImageView
@@ -27,7 +28,8 @@
         app:layout_constraintBottom_toTopOf="@id/bg_login_white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/icon" />
 
     <!--Constraint untuk nampung bg putih-->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -46,7 +48,7 @@
 
         <TextView
             android:id="@+id/tv_login"
-            android:text="Login"
+            android:text="@string/login"
             android:textSize="40sp"
             android:layout_marginTop="25dp"
             android:fontFamily="@font/poppins_bold"
@@ -64,7 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="14dp"
-            android:hint="username"
+            android:hint="@string/username"
             app:errorEnabled="true"
             app:startIconDrawable="@drawable/ic_baseline_person_24"
             app:layout_constraintStart_toStartOf="parent"
@@ -86,7 +88,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="14dp"
-            android:hint="password"
+            android:hint="@string/password"
             app:errorEnabled="true"
             app:startIconDrawable="@drawable/ic_baseline_lock_24"
             app:layout_constraintStart_toStartOf="parent"
@@ -103,7 +105,7 @@
 
         <Button
             android:id="@+id/btn_login"
-            android:text="LOGIN"
+            android:text="@string/login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
@@ -116,7 +118,7 @@
 
         <TextView
             android:id="@+id/tv_register"
-            android:text="Belum Punya Akun? Klik Disini"
+            android:text="@string/belum_punya_akun"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="14dp"
