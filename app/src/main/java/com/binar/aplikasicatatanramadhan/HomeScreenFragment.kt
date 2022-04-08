@@ -1,6 +1,8 @@
 package com.binar.aplikasicatatanramadhan
 
 import android.app.AlertDialog
+import android.content.Context
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -22,23 +24,29 @@ import kotlinx.coroutines.runBlocking
 class HomeScreenFragment : Fragment() {
 
     private var mDB: RamadhanDatabase? = null
-    private lateinit var binding: FragmentHomeScreenBinding
+    private lateinit var preferences: SharedPreferences
+    private var _binding : FragmentHomeScreenBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        binding = FragmentHomeScreenBinding.inflate(layoutInflater)
-        return (binding.root)
+        _binding = FragmentHomeScreenBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        preferences = requireContext().getSharedPreferences(LoginFragment.LOGINUSER, Context.MODE_PRIVATE)
+        binding.tvNama.text = "${preferences.getString(LoginFragment.USERNAME,null)}"
+
         mDB = RamadhanDatabase.getInstance(requireContext())
         binding.rvListRamadhan.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         fetchData()
+        userLogout()
 
         binding.ibJadwal.setOnClickListener {
             findNavController().navigate(R.id.action_homeScreenFragment_to_jadwal_ibadah)
@@ -46,8 +54,7 @@ class HomeScreenFragment : Fragment() {
 
         // Menambahkan Data
         binding.ibCatatanDua.setOnClickListener {
-            val dialogBinding =
-                FragmentInputFormBinding.inflate(LayoutInflater.from(requireContext()))
+            val dialogBinding =  FragmentInputFormBinding.inflate(LayoutInflater.from(requireContext()))
 
             val dialogBuilder = AlertDialog.Builder(requireContext())
             dialogBuilder.setView(dialogBinding.root)
@@ -55,6 +62,7 @@ class HomeScreenFragment : Fragment() {
             val dialog = dialogBuilder.create()
 
             dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
             dialogBinding.ibSimpan.setOnClickListener {
                 val data = RamadhanEntity(
                     null,
@@ -104,8 +112,6 @@ class HomeScreenFragment : Fragment() {
                     val adapter = RamadhanAdapter(
                         it,
                         details = { RamadhanEntity ->
-                            //Letak code
-                            //Toast.makeText(requireContext(), "Testing", Toast.LENGTH_SHORT).show()
 
                             val dialogBinding =
                                 FragmentEditInputBinding.inflate(LayoutInflater.from(requireContext()))
@@ -215,6 +221,23 @@ class HomeScreenFragment : Fragment() {
                     binding.rvListRamadhan.adapter = adapter
                 }
             }
+        }
+    }
+
+    private fun userLogout() {
+        binding.ibLogout.setOnClickListener {
+            val logoutDialog = AlertDialog.Builder(requireContext())
+            logoutDialog.setTitle("Logout")
+            logoutDialog.setMessage("Apakah anda yakin ingin logout?")
+            logoutDialog.setPositiveButton("Logout") {p0, _ ->
+                p0.dismiss()
+                preferences.edit().clear().apply()
+                findNavController().navigate(R.id.action_homeScreenFragment_to_loginFragment)
+            }
+            logoutDialog.setNegativeButton("Batal") {p0, _ ->
+                p0.dismiss()
+            }
+            logoutDialog.show()
         }
     }
 
