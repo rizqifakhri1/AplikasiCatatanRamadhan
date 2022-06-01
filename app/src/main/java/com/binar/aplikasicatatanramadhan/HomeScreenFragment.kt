@@ -23,7 +23,6 @@ import kotlinx.coroutines.runBlocking
 
 class HomeScreenFragment : Fragment() {
 
-    //Inisiasi Variabel yang dibutuhkan
     private var mDB: RamadhanDatabase? = null
     private lateinit var preferences: SharedPreferences
     private var _binding : FragmentHomeScreenBinding? = null
@@ -33,48 +32,43 @@ class HomeScreenFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment - Inisiasi Binding
+        // Inflate the layout for this fragment
         _binding = FragmentHomeScreenBinding.inflate(inflater, container, false)
         return binding.root
     }
 
-    //Membuat fun onViewCreated
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //Implementasi Save Preferences
         preferences = requireContext().getSharedPreferences(LoginFragment.LOGINUSER, Context.MODE_PRIVATE)
-        //Untuk menyapa user Assalamualaikum ${username}
         binding.tvNama.text = "${preferences.getString(LoginFragment.USERNAME,null)}"
 
         mDB = RamadhanDatabase.getInstance(requireContext())
-        //Layout Manager buat Recyclerview
         binding.rvListRamadhan.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         fetchData()
         userLogout()
 
-       // Untuk mengarahkan ke fragment screen jadwal ibadah (Tidak membawa data)
         binding.ibJadwal.setOnClickListener {
             findNavController().navigate(R.id.action_homeScreenFragment_to_jadwal_ibadah)
         }
 
-        // Untuk menambah catatan (tombol atas)
         binding.ibCatatanSatu.setOnClickListener {
             catatan()
         }
 
-        // Untuk menambahkan catatan (tombol bawah)
+
+        // Menambahkan Data
         binding.ibCatatanDua.setOnClickListener {
             catatan()
         }
-        // Untuk menambahkan catatan apabila rv kosong (ada gambar visibel yang bisa di click)
         binding.ivKosong.setOnClickListener {
             catatan()
         }
 
     }
 
-    // Codingan untuk input data
+
+
     fun fetchData() {
         lifecycleScope.launch(Dispatchers.IO) {
             val listRamadhan = mDB?.ramadhanDao()?.getAllData()
@@ -82,30 +76,27 @@ class HomeScreenFragment : Fragment() {
             runBlocking(Dispatchers.Main) {
                 listRamadhan?.let {
 
-                    // Menampilkan gambar apabila recyclerview kosong
                     if (RamadhanAdapter(it, {}).itemCount ==0) {
                         binding.ivKosong.visibility = View.VISIBLE
                     } else {
                         binding.ivKosong.visibility = View.GONE
                     }
-
-                    //Dialog Input
                     val adapter = RamadhanAdapter(
                         it,
                         details = { RamadhanEntity ->
-                            val dialogBinding = FragmentEditInputBinding.inflate(LayoutInflater.from(requireContext()))
+
+                            val dialogBinding =
+                                FragmentEditInputBinding.inflate(LayoutInflater.from(requireContext()))
                             val dialogBuilder = AlertDialog.Builder(requireContext())
                             dialogBuilder.setView(dialogBinding.root)
                             val dialog = dialogBuilder.create()
-                            
-                            dialog.setCancelable(true) //Untuk bisa di cancle
-                            dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT)) //Untuk membuat background transparant
+                            dialog.setCancelable(true)
+                            dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
-                            //Mulai membaca input dari dailog fragment
                             if (RamadhanEntity.berpuasa) {
                                 dialogBinding.cbPuasa.isChecked = true
                             }
-                            dialogBinding.tiInputHari.setText(RamadhanEntity.hari.toString())
+                            dialogBinding.tiInputHari.setText(RamadhanEntity.hari.toString())//text = "${RamadhanEntity.hari.toString().toInt()}"
                             dialogBinding.tiInputTaggal.setText(RamadhanEntity.tanggal)
                             dialogBinding.etInputCatatan.setText(RamadhanEntity.catatan)
 
